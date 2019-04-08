@@ -19,6 +19,17 @@
       </li>
     </ul>
     <input type="button" @click="additem" value="候補日を追加">
+    <table border="1">
+      <tr>
+        <th>date</th><th>start</th><th>end</th>
+      </tr>
+      <tr
+      v-for="(item, index) in CandidateDate"
+      :key="'list-item' + index"
+      >
+        <td>{{item.date}}</td><td>{{item.start}}</td><td>{{item.end}}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
